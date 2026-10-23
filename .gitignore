@@ -1,0 +1,9 @@
+# Allow only the three reviewed distribution files.
+*
+!/.gitignore
+!/README.md
+!/skills/
+/skills/*
+!/skills/bbq-flat-to-playable/
+/skills/bbq-flat-to-playable/*
+!/skills/bbq-flat-to-playable/SKILL.md
