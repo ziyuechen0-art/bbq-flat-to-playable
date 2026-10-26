@@ -1,6 +1,6 @@
 # bbq-flat-to-playable
 
-`v0.1.0-beta` 公开试用版。将已有烧烤三消平面 PSD 整理为可玩美术交付。Photoshop 实际执行及跨电脑测试尚未完成；不代表已制作可运行广告。
+`v0.1.1-beta` 公开试用版。将已有烧烤三消平面 PSD 整理为可玩美术交付。已完成本机 Photoshop 流程测试；跨电脑测试尚未完成；不代表已制作可运行广告。
 
 完整规范见 [SKILL.md](skills/bbq-flat-to-playable/SKILL.md)。Photoshop 执行注意事项已内联，无外部案例或随包脚本依赖。
 
@@ -17,12 +17,12 @@
 在 Codex 输入：
 
 ```text
-$skill-installer 请从 https://github.com/ziyuechen0-art/bbq-flat-to-playable/tree/v0.1.0-beta/skills/bbq-flat-to-playable 安装此 Skill。
+$skill-installer 请从 https://github.com/ziyuechen0-art/bbq-flat-to-playable/tree/v0.1.1-beta/skills/bbq-flat-to-playable 安装此 Skill。
 ```
 
 公开仓库可匿名下载，无需 GitHub 账号、令牌或 GitHub CLI 登录。安装成功后下一轮调用；若未发现则重启 Codex。安装位置由本机 skill-installer 决定。
 
-也可无需 GitHub 账号手动安装：下载 [Beta ZIP](https://github.com/ziyuechen0-art/bbq-flat-to-playable/archive/refs/tags/v0.1.0-beta.zip)，解压后将 `skills/bbq-flat-to-playable` 文件夹放入用户目录的 `.agents/skills/`，确保最终为 `~/.agents/skills/bbq-flat-to-playable/SKILL.md`（Windows 为 `%USERPROFILE%\.agents\skills\bbq-flat-to-playable\SKILL.md`）。不要复制整个仓库作为 Skill 文件夹。
+也可无需 GitHub 账号手动安装：下载 [Beta ZIP](https://github.com/ziyuechen0-art/bbq-flat-to-playable/archive/refs/tags/v0.1.1-beta.zip)，解压后将 `skills/bbq-flat-to-playable` 文件夹放入用户目录的 `.agents/skills/`，确保最终为 `~/.agents/skills/bbq-flat-to-playable/SKILL.md`（Windows 为 `%USERPROFILE%\.agents\skills\bbq-flat-to-playable\SKILL.md`）。不要复制整个仓库作为 Skill 文件夹。
 
 同名 Skill 已存在时先备份到 Codex 不扫描的位置，再移出旧安装目录并安装新标签；避免在多个扫描位置重复安装。安装副本不会自动同步 GitHub，不随更新覆盖 Photoshop 插件或个人配置。
 
@@ -44,11 +44,18 @@ $bbq-flat-to-playable 使用我提供的最新平面 PSD 和本次可玩需求�
 
 ## Beta 验收状态
 
-- 本次发布仅核对文档格式、完整性、依赖及公开文件范围。
-- Photoshop 实际执行尚未完成，包括图层栅格化、按钮分层、横竖及胜败一致性、批注参数、保存重开与 6 张 PNG 验收。
+- 本次发布核对文档格式、完整性、依赖及公开文件范围；已根据本机实际 PSD 修订测试补充布局规则。
+- 本机已执行图层栅格化、按钮分层、横竖及胜败页面检查、批注参数读取、PSD 保存重开与 6 张 PNG 比对；该结果不代表所有素材和 Photoshop 版本均已验证。
 - 跨电脑安装、环境配置及完整流程测试尚未完成。
 - 首次试用使用授权测试副本，逐项记录通过、失败或未执行，不把文档检查当成功能验收。
 
 ## 共享范围
 
 仅公开 README.md、.gitignore、skills/bbq-flat-to-playable/SKILL.md 三个文件中的通用指令。无公司具体项目内容、历史案例、原始素材路径、PSD、图片、缓存、凭据或个人配置。素材与字体由使用者自行提供，本仓库不授予任何第三方素材再分发权限。
+
+## v0.1.1-beta 更新
+
+- 结束页复用用户认可的圆形 WIN / FAIL 基础模板，固定图标、底层装饰与 Logo。
+- 横版 Logo 固定左上方，按钮在其下方，200×78px。
+- 竖版玩法约占上方720×1120px，按钮340×135px，留底边空隙且不遮挡玩法。
+- 基础结束页和 Logo 需使用者提供获准使用的素材，本仓库不附带。
