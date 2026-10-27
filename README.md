@@ -1,28 +1,28 @@
 # bbq-flat-to-playable
 
-`v0.1.1-beta` 公开试用版。将已有烧烤三消平面 PSD 整理为可玩美术交付。已完成本机 Photoshop 流程测试；跨电脑测试尚未完成；不代表已制作可运行广告。
+`v0.1.2-beta` 公开试用版。将已有烧烤三消平面 PSD 整理为可玩美术交付。已完成本机 Photoshop 流程测试；跨电脑测试尚未完成；不代表已制作可运行广告。
 
 完整规范见 [SKILL.md](skills/bbq-flat-to-playable/SKILL.md)。Photoshop 执行注意事项已内联，无外部案例或随包脚本依赖。
 
 ## 默认交付
 
 - 两套 720×1280 竖版玩法 PSD、一份 720×1280 胜败结束页 PSD、一份 1280×720 双皮肤横版 PSD。
-- 6 张带批注 PNG：横版两张、竖版两张、胜利和失败各一张。实际素材由使用者提供，仓库不包含这些交付文件。
+- 6 张 PNG（仅对实际存在的置灰、发光状态添加参数批注）：横版两张、竖版两张、胜利和失败各一张。实际素材由使用者提供，仓库不包含这些交付文件。
 - 两套竖版玩法及结束页的非文字内容层栅格化，保留独立素材和分组；文字保持可编辑。横版不默认强制全部栅格化。
-- 图层及组使用有意义的英文字母命名。横竖及胜败页面统一按钮；btn 为无字底图，playnow 为独立可编辑 PLAY NOW 文字层。
-- 批注仅写实际状态、样式与必要数值；保留备份、横竖适配、导出读回及逐项验收要求。盘数、布局及比例遵循当次任务。
+- 图层及组使用简洁英文或拼音命名，允许数字编号；同类基础名称和编号一致，组与图层不重名。横竖及胜败页面统一按钮；btn 为无字底图，playnow 为独立可编辑 PLAY NOW 文字层。
+- 不再标注文字内容、字体、字号、文字颜色或描边；批注仅写实际置灰和发光状态的数值；保留备份、横竖适配、导出读回及逐项验收要求。盘数、布局及比例遵循当次任务。
 
 ## Codex 安装
 
 在 Codex 输入：
 
 ```text
-$skill-installer 请从 https://github.com/ziyuechen0-art/bbq-flat-to-playable/tree/v0.1.1-beta/skills/bbq-flat-to-playable 安装此 Skill。
+$skill-installer 请从 https://github.com/ziyuechen0-art/bbq-flat-to-playable/tree/v0.1.2-beta/skills/bbq-flat-to-playable 安装此 Skill。
 ```
 
 公开仓库可匿名下载，无需 GitHub 账号、令牌或 GitHub CLI 登录。安装成功后下一轮调用；若未发现则重启 Codex。安装位置由本机 skill-installer 决定。
 
-也可无需 GitHub 账号手动安装：下载 [Beta ZIP](https://github.com/ziyuechen0-art/bbq-flat-to-playable/archive/refs/tags/v0.1.1-beta.zip)，解压后将 `skills/bbq-flat-to-playable` 文件夹放入用户目录的 `.agents/skills/`，确保最终为 `~/.agents/skills/bbq-flat-to-playable/SKILL.md`（Windows 为 `%USERPROFILE%\.agents\skills\bbq-flat-to-playable\SKILL.md`）。不要复制整个仓库作为 Skill 文件夹。
+也可无需 GitHub 账号手动安装：下载 [Beta ZIP](https://github.com/ziyuechen0-art/bbq-flat-to-playable/archive/refs/tags/v0.1.2-beta.zip)，解压后将 `skills/bbq-flat-to-playable` 文件夹放入用户目录的 `.agents/skills/`，确保最终为 `~/.agents/skills/bbq-flat-to-playable/SKILL.md`（Windows 为 `%USERPROFILE%\.agents\skills\bbq-flat-to-playable\SKILL.md`）。不要复制整个仓库作为 Skill 文件夹。
 
 同名 Skill 已存在时先备份到 Codex 不扫描的位置，再移出旧安装目录并安装新标签；避免在多个扫描位置重复安装。安装副本不会自动同步 GitHub，不随更新覆盖 Photoshop 插件或个人配置。
 
@@ -46,6 +46,7 @@ $bbq-flat-to-playable 使用我提供的最新平面 PSD 和本次可玩需求�
 
 - 本次发布核对文档格式、完整性、依赖及公开文件范围；已根据本机实际 PSD 修订测试补充布局规则。
 - 本机已执行图层栅格化、按钮分层、横竖及胜败页面检查、批注参数读取、PSD 保存重开与 6 张 PNG 比对；该结果不代表所有素材和 Photoshop 版本均已验证。
+- v0.1.2-beta 新增规则已完成文档检查，尚未重新执行 Photoshop 完整流程测试；上述本机测试为此前版本的验证记录。
 - 跨电脑安装、环境配置及完整流程测试尚未完成。
 - 首次试用使用授权测试副本，逐项记录通过、失败或未执行，不把文档检查当成功能验收。
 
@@ -59,3 +60,9 @@ $bbq-flat-to-playable 使用我提供的最新平面 PSD 和本次可玩需求�
 - 横版 Logo 固定左上方，按钮在其下方，200×78px。
 - 竖版玩法约占上方720×1120px，按钮340×135px，留底边空隙且不遮挡玩法。
 - 基础结束页和 Logo 需使用者提供获准使用的素材，本仓库不附带。
+
+## v0.1.2-beta 更新
+
+- 保留 4 份 PSD、6 张 PNG 及现有布局规则。
+- 仅标注置灰和发光状态参数，简化英文/拼音与数字编号命名。
+- 预览按皮肤与胜败分别切换导出；最终保存前递归开启所有交付所需图层和组，包括 win、fail 和两套皮肤，并重开检查。最终全开启合成画面可能叠加互斥状态，不要求与某一张预览一致。
